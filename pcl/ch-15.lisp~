@@ -1,0 +1,12 @@
+;;;; Chapter 15 Practical: A Portable Pathname Library
+
+(defun foo () ; *Features* and Read-Time Conditionalization 
+  #+allegro (do-one-thing)
+  #+sbcl (do-another-thing)
+  #+clisp (something-else)
+  #+cmu (yet-another-version)
+  #-(or allegro sbcl clisp cmu) (error "Not implemented"))
+
+(defun do-another-thing () ;Sample
+  (format t "hellow"))
+

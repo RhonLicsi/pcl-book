@@ -1,0 +1,44 @@
+;;;; Chapter 22 LOOP for Black Belts
+
+
+(defparameter *pangkat* '(a b c d e))
+
+;; Simple 5 loops that increment
+(defun sample-loop ()
+  (loop for item in *pangkat*
+	for i from 1 to 5
+	do (format t "Item: ~a, Index: ~a~%" item i)))
+
+;; Loops that counts down
+(defun down-loop ()
+  (loop for i from 20 downto 10 collect i))
+
+;; Loops 1 word 5 times
+(defun loop-one-word ()
+  (loop repeat 5
+	do (print "Hello, world!")))
+
+
+(defparameter *list1* '(1 2 3 4 5))
+
+;; Loop in a list
+
+(defun loop-list ()
+  (let ((result1 (loop for a in *list1* collect a)) 
+        (result2 (loop for i in *list1* by #'cddr collect i)) 
+	(result3 (loop for x across "abcd" collect x))) ; for vector
+    (format t "First loop result: ~a~%" result1) 
+    (format t "Second loop result: ~a~%" result2)
+    (format t "Third loop result: ~a~%" result3)))
+
+
+;; With = loop
+(defun equal-loop ()
+    (loop repeat 5
+	  for x = 0 then y ; then is used to initialize the value of y to x
+	  for y = 1 then (+ x y)
+	  collect y))
+
+
+
+

@@ -1,0 +1,41 @@
+;Chapter 13 Beyond Lists: Other Uses for Cons Cells
+
+;Trees
+;has SUBSTITUTE functions
+
+(defvar *tree* '(1 2 (3 2 1) ((1 1) (2 2))) )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

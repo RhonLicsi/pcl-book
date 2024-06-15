@@ -1,0 +1,4 @@
+;;;; Chapter 16 Object Reorientation: Generic Functions
+
+(defgeneric draw (shape)
+  (:documentation "Draw the given shape on the screen."))

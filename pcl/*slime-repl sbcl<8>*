@@ -1,0 +1,53 @@
+; SLIME 2.28; processing (DEFVAR *ACCOUNT-NUMBERS* ...)
+; processing (DEFVAR *LIST-ACCOUNT* ...)
+; processing (DEFCLASS BANK-ACCOUNT ...)
+; processing (DEFPARAMETER *ACCOUNT* ...)
+; processing (DEFUN CREATE-ACCT ...)
+; processing (DEFUN DISPLAY-ALL-ACCOUNTS ...)
+CL-USER> (create-acct "adi" 100)
+
+; processing (DEFVAR *ACCOUNT-NUMBERS* ...)
+; processing (DEFVAR *LIST-ACCOUNT* ...)
+; processing (DEFCLASS BANK-ACCOUNT ...)
+; processing (DEFPARAMETER *ACCOUNT* ...)
+; processing (DEFUN CREATE-ACCT ...)
+; processing (DEFUN DISPLAY-ALL-ACCOUNTS ...); Evaluation aborted on #<SB-PCL::INITARG-ERROR {1002FEF5F3}>.
+CL-USER> (create-acct "adi" 100)
+
+#<BANK-ACCOUNT {100391DE63}>
+CL-USER> (create-acct "rhon" 1000000)
+#<BANK-ACCOUNT {100391EB73}>
+CL-USER> (display-all-accounts)
+Account Number: 2, Account Type: gold, Customer Name: rhon, Balance: 1000000
+Account Number: 1, Account Type: bronze, Customer Name: adi, Balance: 100
+NIL
+; processing (DEFUN CREATE-ACCT ...)
+CL-USER> (create-acct "rachel" 60000)
+
+#<BANK-ACCOUNT {10039BFF73}>
+CL-USER> (display-all-accounts)
+Account Number: 3, Account Type: Silver, Customer Name: rachel, Balance: 60000
+Account Number: 2, Account Type: gold, Customer Name: rhon, Balance: 1000000
+Account Number: 1, Account Type: bronze, Customer Name: adi, Balance: 100
+NIL
+; processing (DEFVAR *ACCOUNT-NUMBERS* ...)
+; processing (DEFVAR *OPENING-BONUS* ...)
+; processing (DEFVAR *LIST-ACCOUNT* ...)
+; processing (DEFCLASS BANK-ACCOUNT ...)
+; processing (DEFPARAMETER *ACCOUNT* ...)
+; processing (DEFUN CREATE-ACCT ...)
+; processing (DEFUN DISPLAY-ALL-ACCOUNTS ...)
+CL-USER> (create-acct "adi" 5000 90)
+
+#<BANK-ACCOUNT {1003E5ABD3}>
+CL-USER> (create-acct "rhon" 900000 10)
+#<BANK-ACCOUNT {1003E73F93}>
+CL-USER> (display-all-accounts)
+Account Number: 5, Account Type: Gold, Customer Name: rhon, Bonus: 10, Balance: 900000
+,Account Number: 4, Account Type: Bronze, Customer Name: adi, Bonus: 90, Balance: 5000
+,Account Number: 3, Account Type: Silver, Customer Name: rachel, Bonus: 1, Balance: 60000
+,Account Number: 2, Account Type: gold, Customer Name: rhon, Bonus: 2, Balance: 1000000
+,Account Number: 1, Account Type: bronze, Customer Name: adi, Bonus: 3, Balance: 100
+,
+NIL
+CL-USER> 

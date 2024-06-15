@@ -1,0 +1,28 @@
+;Chapter 12, They called it Lisp for a reason
+
+(defparameter *cons* (cons 1 2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

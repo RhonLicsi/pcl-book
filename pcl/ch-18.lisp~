@@ -1,0 +1,17 @@
+;;;; Chapter 18 A Few FORMAT Recipes
+
+;;; Format
+(format t "~{~a~^, ~}" list)
+
+;; ~{ ... ~} loop control
+;; ~a prints as a humable
+;; ~^ conditional newline
+;; , the string
+
+
+
+
+
+
+
+
